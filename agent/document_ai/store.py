@@ -1,4 +1,5 @@
 import re
+from contextlib import contextmanager
 import sqlite3
 import uuid
 from pathlib import Path
@@ -20,11 +21,16 @@ class Store:
             CREATE TABLE IF NOT EXISTS chunks (id TEXT PRIMARY KEY, document_id TEXT NOT NULL REFERENCES documents(id) ON DELETE CASCADE, text TEXT NOT NULL);
             CREATE INDEX IF NOT EXISTS documents_owner ON documents(owner);""")
 
+    @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path)
         db.row_factory = sqlite3.Row
         db.execute('PRAGMA foreign_keys=ON')
-        return db
+        try:
+            with db:
+                yield db
+        finally:
+            db.close()
 
     def add(self, owner, filename, text):
         parts = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100).split_text(text)
