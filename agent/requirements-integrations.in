@@ -1,0 +1,4 @@
+# Optional integration dependencies. Resolve and pin before enabling live mode.
+google-adk
+langchain-pinecone
+mcp

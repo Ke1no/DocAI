@@ -1,0 +1,4 @@
+Project launch notes
+The project deadline is December 15, 2026.
+The team will first implement document upload and citation display.
+The next milestone is evaluating retrieval quality with a small test dataset.
