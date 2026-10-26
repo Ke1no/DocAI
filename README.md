@@ -49,4 +49,4 @@ cd ../frontend
 npm run build
 ```
 
-See [中文开发清单](docs/NEXT_STEPS.zh-CN.md) and [architecture](docs/ARCHITECTURE.md).
+See [development roadmap](docs/NEXT_STEPS.md) and [architecture](docs/ARCHITECTURE.md).
