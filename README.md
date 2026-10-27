@@ -8,11 +8,9 @@ Upload a document, ask a question, and inspect the source behind the response. T
 
 [Run locally](#run) · [Integration boundaries](docs/INTEGRATIONS.md) · [Development roadmap](docs/NEXT_STEPS.md)
 
-![DocAI retrieval result with a source citation](docs/assets/evidence.jpg)
+![DocAI retrieval result with a source citation](docs/assets/docai-evidence.jpg)
 
 *Actual browser capture: a sample document was uploaded, selected and queried. The response quotes matching source text and includes a citation.*
-
-*Screenshots were captured before the project rename and retain the previous display name.*
 
 ## Engineering highlights
 

@@ -9,3 +9,5 @@ Start the Python service and Next.js using the README. Upload `examples/project-
 ## Interpretation
 
 Screenshots document the visible state of this development scaffold. They do not imply a public deployment, production readiness or completion of planned features. See the README for implemented scope and validation.
+
+The screenshots show the current DocAI branding and replace the earlier preview assets.
