@@ -2,7 +2,7 @@
 No web search, external credentials or document access is exposed.
 """
 from mcp.server.fastmcp import FastMCP
-server = FastMCP('Document AI scaffold')
+server = FastMCP('DocAI scaffold')
 @server.tool()
 def project_status() -> str:
     """Describe this scaffold's capabilities without accessing private documents."""

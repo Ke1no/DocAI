@@ -18,7 +18,7 @@ class Query(BaseModel):
         return value.strip()
 
 def create_app(path=None):
-    app = FastAPI(title='Document AI local scaffold')
+    app = FastAPI(title='DocAI local scaffold')
     store = Store(path or os.environ.get('DOCUMENT_AI_DB', 'documents.db'))
     def owner(value):
         if not value or len(value) > 100: raise HTTPException(400, 'Missing local namespace')

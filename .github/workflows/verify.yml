@@ -1,4 +1,4 @@
-name: Verify Document AI
+name: Verify DocAI
 on: [push, pull_request]
 permissions:
   contents: read
