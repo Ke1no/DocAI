@@ -11,7 +11,8 @@ export async function proxy(request: Request, path: string, body?: BodyInit, con
   }
   // Restrict browser-origin writes; production still needs real account authentication.
   const origin = request.headers.get('origin')
-  if (request.method !== 'GET' && origin && origin !== new URL(request.url).origin) return NextResponse.json({ error: 'Invalid origin' }, { status: 403 })
+  const expectedOrigin = process.env.APP_ORIGIN || new URL(request.url).origin
+  if (request.method !== 'GET' && origin && origin !== expectedOrigin) return NextResponse.json({ error: 'Invalid origin' }, { status: 403 })
   const headers = new Headers({ 'x-document-session': namespace })
   if (contentType) headers.set('Content-Type', contentType)
   try {
